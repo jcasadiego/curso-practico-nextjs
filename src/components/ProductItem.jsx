@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import logo from '@icons/bt_add_to_cart.svg';
 import AppContext from '@context/AppContext';
-import '@styles/ProductItem.scss';
+import styles from '@styles/ProductItem.module.scss';
 
 const bike = 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
 
@@ -13,7 +13,7 @@ const ProductItem = ({ product }) => {
     }
 
     return(
-        <div className="ProductItem">
+        <div className={styles.ProductItem}>
             <img src={product.images} alt={product.title} />
             <div className="product-info">
                 <div>

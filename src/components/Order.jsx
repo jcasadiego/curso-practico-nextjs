@@ -1,10 +1,10 @@
 import React from 'react';
 import flecha from '@icons/flechita.svg';
-import '@styles/Order.scss';
+import styles from '@styles/Order.moduele.scss';
 
 const Order = () => {
     return(
-        <div className="Order">
+        <div className={styles.Order}>
             <p>
                 <span>03.25.21</span>
                 <span>6 articles</span>

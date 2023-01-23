@@ -9,6 +9,16 @@
 	border-radius: 20px;
 	object-fit: cover;
 }
+.product-img {
+	position: relative;
+	width: 100%;
+	height: 240px;
+}
+
+.product-img img {
+	border-radius: 20px;
+	object-fit: cover;
+}
 .product-info {
 	display: flex;
 	justify-content: space-between;
@@ -33,6 +43,12 @@
 	margin-top: 0;
 	margin-bottom: 0;
 	color: $--very-light-pink;
+}
+.add-to-cart-btn {
+	box-shadow: $--very-light-pink 0px 0px 2px;
+}
+.disabled {
+	cursor: not-allowed;
 }
 @media (max-width: 640px) {
 	.cards-container {

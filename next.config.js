@@ -7,8 +7,9 @@ module.exports = {
   reactStrictMode:true,
   images: {
     domains: [
-      'api.lorem.space/image/',
-      'placeimg.com'
+      'api.lorem.space',
+      'placeimg.com',
+      'i.picsum.photos'
     ],
   },
 }

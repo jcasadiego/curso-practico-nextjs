@@ -10,13 +10,7 @@ import shoppingCart from '@icons/icon_shopping_cart.svg';
 import styles from '@styles/Header.module.scss';
 
 const Header = () => {
-    const [toggle, setToggle] = useState(false);
-    const [toggleOrders, setToggleOrders] = useState(false);
-    const { state } = useContext(AppContext);
-
-    const handleToggle = () => {
-        setToggle(!toggle);
-    }
+    const { state, toggleOrder, toggleMenu } = useContext(AppContext);
 
     return (
         <>
@@ -27,7 +21,7 @@ const Header = () => {
                     className={styles.menu}
                 />
                 <div className={styles['navbar-left']}>
-                    <Link href="/">
+                    <Link href="/" legacyBehavior>
                         <Image 
                             src={logo} 
                             alt="logo" 
@@ -57,14 +51,15 @@ const Header = () => {
                 </div>
                 <div className={styles['navbar-right']}>
                     <ul>
-                        <li className={styles['navbar-email']} onClick={handleToggle}>
+                        <li className={`${styles['more-clickable-area']} ${styles['navbar-email']} ${styles.pointer}`} onClick={() => toggleMenu()}>
                             platzi@example.com
                         </li>
                         <li 
                             className={styles['navbar-shopping-cart']}
-                            onClick={() => setToggleOrders(!toggleOrders)}
+                            onClick={() => toggleOrder()}
                         >
-                            <Image 
+                            <Image
+                                className={`${styles['more-clickable-area']} ${styles.pointer}`}
                                 src={shoppingCart} 
                                 alt="shopping cart"
                             />
@@ -72,9 +67,9 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                { toggle && <Menu />}
+                {state.menuIsOpen && <Menu />}
             </nav>
-            { toggleOrders && <MyOrder /> }
+            {state.orderIsOpen && <MyOrder />}
         </>
     );
 };

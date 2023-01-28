@@ -11,5 +11,7 @@ module.exports = {
       'placeimg.com',
       'i.picsum.photos'
     ],
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 }

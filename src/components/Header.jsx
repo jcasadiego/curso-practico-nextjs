@@ -12,6 +12,17 @@ import styles from '@styles/Header.module.scss';
 const Header = () => {
     const { state, toggleOrder, toggleMenu } = useContext(AppContext);
 
+    const ImageLogo = React.forwardRef(() => {
+        return (
+            <Image 
+                src={logo} 
+                alt="logo" 
+                className={styles['nav-logo']}
+                priority  
+            />
+        )
+    });
+
     return (
         <>
             <nav className={styles.Nav}>
@@ -21,12 +32,8 @@ const Header = () => {
                     className={styles.menu}
                 />
                 <div className={styles['navbar-left']}>
-                    <Link href="/" legacyBehavior>
-                        <Image 
-                            src={logo} 
-                            alt="logo" 
-                            className={styles['nav-logo']}  
-                        />
+                    <Link href="/" passHref legacyBehavior>
+                        <ImageLogo />
                     </Link>
                     <ul>
                         <li>

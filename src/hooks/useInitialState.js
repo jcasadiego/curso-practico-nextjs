@@ -1,49 +1,49 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const initialState = {
-    cart: [],
-    orderIsOpen: false,
-    menuIsOpen: false,
+  cart: [],
+  orderIsOpen: false,
+  menuIsOpen: false,
 };
 
 const useInitialState = () => {
-    const [state, setState] = useState(initialState);
+  const [state, setState] = useState(initialState);
 
-    const addToCart = (payload) => {
-        setState({
-            ...state,
-            cart: [...state.cart, payload]
-        });
-    };
+  const addToCart = (payload) => {
+    setState({
+      ...state,
+      cart: [...state.cart, payload],
+    });
+  };
 
-    const removeFromCart = (indexValue) => {
-        setState({
-            ...state,
-            cart: state.cart.filter((product,index) => index !== indexValue),
-        });
-    };
+  const removeFromCart = (indexValue) => {
+    setState({
+      ...state,
+      cart: state.cart.filter((product, index) => index !== indexValue),
+    });
+  };
 
-    const toggleOrder = () => {
-        setState({
-            ...state,
-            orderIsOpen: !state.orderIsOpen,
-        });
-    };
+  const toggleOrder = () => {
+    setState({
+      ...state,
+      orderIsOpen: !state.orderIsOpen,
+    });
+  };
 
-    const toggleMenu = () => {
-        setState({
-            ...state,
-            menuIsOpen: !state.menuIsOpen,
-        });
-    };
+  const toggleMenu = () => {
+    setState({
+      ...state,
+      menuIsOpen: !state.menuIsOpen,
+    });
+  };
 
-    return {
-        state,
-        addToCart,
-        removeFromCart,
-        toggleOrder,
-        toggleMenu,
-    };
+  return {
+    state,
+    addToCart,
+    removeFromCart,
+    toggleOrder,
+    toggleMenu,
+  };
 };
 
 export default useInitialState;

@@ -1,24 +1,26 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import logo from '@logos/logo_yard_sale.svg';
 import email from '@icons/email.svg';
-import styles from '@styles/RecoveryPassword.module.scss'
+import styles from '@styles/RecoveryPassword.module.scss';
 
 const RecoveryPassword = () => {
     return (
-        <div className="login">
-            <div className="form-container">
-                <img src={logo} alt="logo" className="logo" />
-                <h1 className="title">Email has been sent!</h1>
-                <p className="subtitle">
+        <div className={styles.login}>
+            <div className={styles['form-container']}>
+                <Image src={logo} alt="logo" className={styles.logo} />
+                <h1 className={styles.title}>Email has been sent!</h1>
+                <p className={styles.subtitle}>
                     Please check your inbox for instructions on how to reset the password
                 </p>
-                <div className="email-image">
-                    <img src={email} alt="email" />
+                <div className={styles['email-image']}>
+                    <Image src={email} alt="email" />
                 </div>
-                <button className="primary-button login-button">Login</button>
-                <p className="resend">
-                    <span>Didn't receive the email?</span>
-                    <a href="/">Resend</a>
+                <button className={`${styles['primary-button']} ${styles['login-button']}`}>Login</button>
+                <p className={styles.resend}>
+                    <span>Didn`&apos;`t receive the email?</span>
+                    <Link href="/">Resend</Link>
                 </p>
             </div>
         </div>

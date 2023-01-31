@@ -9,7 +9,7 @@ const OrderItem = ({ product, indexValue }) => {
 
     const handleRemove = (index) => {
         removeFromCart(index);
-    }
+    };
 
     return (
         <div className={styles.OrderItem}>

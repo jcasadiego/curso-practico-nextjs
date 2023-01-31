@@ -5,11 +5,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          React Shop
-        </title>
+        <title>React Shop</title>
       </Head>
       <ProductList />
     </>
-  )
+  );
 }

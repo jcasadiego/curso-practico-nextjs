@@ -13,14 +13,20 @@ const OrderItem = ({ product, indexValue }) => {
 
     return (
         <div className={styles.OrderItem}>
-            <figure>
-                <Image
-                    src={product?.images[0]}
-                    alt={product?.title}
-                />
-            </figure>
-            <p>{product?.title}</p>
-            <p>${product?.price}</p>
+            {
+                product?.images[0] !== '' && product?.images.length > 1 && product?.images[0].startsWith('https://') 
+                ?  
+                <>
+                    <figure>
+                        <Image
+                            src={product?.images[0]}
+                            alt={product?.title} />
+                    </figure>
+                    <p>{product?.title}</p>
+                    <p>${product?.price}</p>
+                </>
+                : <p>   No tiene productos agregados en el carrito!!    </p>
+            }
             <Image 
                 className={`${styles.pointer} ${styles['more-clickable-area']}`}
                 src={close} alt="close" 

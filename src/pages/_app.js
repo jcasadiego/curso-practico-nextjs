@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from '@components/Header';
 import Script from 'next/script';
 import AppContext from '@context/AppContext';

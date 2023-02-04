@@ -14,11 +14,11 @@ const ProductInfo = () => {
                 width={50}
                 height={50} 
             />
-            <div classname={styles.ProductInfo}>
+            <div className={styles.ProductInfo}>
                 <p>$35,00</p>
                 <p>Bike</p>
                 <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
-                <button classname={`${styles['primary-button']} ${styles['add-to-cart-button']}`}>
+                <button className={`${styles['primary-button']} ${styles['add-to-cart-button']}`}>
                     <Image 
                         src={addCart} 
                         alt="add to cart" 

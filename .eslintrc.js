@@ -11,11 +11,13 @@ module.exports = {
         'plugin:jsx-a11y/recommended',
         'plugin:prettier/recommended',
         'next',
-        'next/core-web-vitals'
+        'next/core-web-vitals',
+        'plugin:react/recommended'
     ],
     rules: {
         'semi': ['error', 'always'],
         'prettier/prettier': 0,
         "react/display-name": "off",
+        'react/prop-types': ['off'],
     }
 }

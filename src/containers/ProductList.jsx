@@ -14,7 +14,7 @@ const ProductList = () => {
                 {products.map((product) => {
                     return (
                         <ProductItem key={product.id} product={product} />
-                    )
+                    );
                 })}
             </div>
         </section>
